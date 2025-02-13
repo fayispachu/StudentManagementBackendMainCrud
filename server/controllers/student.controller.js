@@ -51,9 +51,9 @@ const getOneDoc = async (req, res) => {
     console.log(id);
     const doc = await Students.findById(id);
     console.log(doc);
-    return res.status(200).json({ doc, message: "internal delete  error" });
+    return res.status(200).json({ doc, message: "sucsess  get one student" });
   } catch (error) {
-    console.log(error, "error in get one task db");
+    console.log(error, "error in get one task from db");
     res.status(500).json({ message: "internal getOne  error" });
   }
 };
